@@ -77,7 +77,7 @@ const Loader = () => {
               transition={{ delay: 0.4, duration: 0.5 }}
               className="text-2xl font-bold text-amber-800 mb-6"
             >
-              Versha Farm House
+              Varsha Farm House
             </motion.h1>
 
             <motion.div
