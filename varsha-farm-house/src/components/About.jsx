@@ -21,7 +21,7 @@ const About = () => {
             className="relative h-[400px] rounded-lg overflow-hidden shadow-xl"
           >
             <img
-              src="https://lh5.googleusercontent.com/p/AF1QipNH1P39CK4sV-WX0ySAyFoWATaG4pcQKfI-jks=w600-h485-p-k-no"
+              src="/hero_image.jpeg"
               alt="Varsha Farm House exterior"
               fill
               className="w-full h-full object-cover"
@@ -46,7 +46,7 @@ const About = () => {
             <p className="text-gray-700 mb-6">
               Our commitment to sustainable farming practices ensures that every
               dish served at our table is fresh, organic, and bursting with
-              flavor. The farm spans over 15 acres of lush greenery, providing
+              flavor. The farm spans over 1.5 acres of lush greenery, providing
               ample space for relaxation and recreation.
             </p>
             <p className="text-gray-700">
