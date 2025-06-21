@@ -7,15 +7,15 @@ const CustomerPhotos = () => {
   const customerPhotos = [
     {
       src: "/customer/customer1.jpeg",
-      alt: "Family enjoying picnic at Versha Farm House",
+      alt: "Family enjoying picnic at Varsha Farm House",
     },
     {
       src: "/customer/customer2.jpeg",
-      alt: "Family enjoying picnic at Versha Farm House",
+      alt: "Family enjoying picnic at Varsha Farm House",
     },
     {
       src: "/customer/customer3.jpeg",
-      alt: "Family enjoying picnic at Versha Farm House",
+      alt: "Family enjoying picnic at Varsha Farm House",
     },
     {
       src: "https://lh3.googleusercontent.com/p/AF1QipNgil1n918P4Dhi6gKhLp9Zym2cYRjTDH6-xtI=s1360-w1360-h1020",
@@ -43,7 +43,7 @@ const CustomerPhotos = () => {
     },
     {
       src: "https://lh3.googleusercontent.com/p/AF1QipNG6TsUTAD03t1OBUDm59n6CcwcJ2tN2mkfBa8=s1360-w1360-h1020",
-      alt: "Family gathering at Versha Farm House",
+      alt: "Family gathering at Varsha Farm House",
     },
     {
       src: "https://lh3.googleusercontent.com/p/AF1QipOISmbh9yDH6mIeHOUhTq9dqaijkE4SsfApg0Q=s1360-w1360-h1020",
