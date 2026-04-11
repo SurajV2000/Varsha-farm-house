@@ -11,6 +11,7 @@ import { Navbar } from "./components/Navbar";
 import Scrolltotop from "./components/Scrolltotop";
 import { AnimatePresence, motion } from "framer-motion";
 import Loader from "./components/Loader";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -47,6 +48,7 @@ function App() {
           </motion.div>
         )}
       </AnimatePresence>
+      <Analytics />
     </>
   );
 }
