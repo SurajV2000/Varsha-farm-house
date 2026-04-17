@@ -36,7 +36,7 @@ function App() {
             transition={{ duration: 0.5 }}
             className="min-h-screen bg-stone-50"
           >
-            {/* <Navbar /> */}
+            <Navbar />
             <Hero />
             <About />
             <Amenities />
