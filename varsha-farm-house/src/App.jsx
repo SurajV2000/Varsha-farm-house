@@ -12,10 +12,12 @@ import Scrolltotop from "./components/Scrolltotop";
 import { AnimatePresence, motion } from "framer-motion";
 import Loader from "./components/Loader";
 import { Analytics } from "@vercel/analytics/react";
+import BookNow from "./components/BookNow";
+import WhyChooseUs from "./components/WhyChooseUs";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
-
+  // -
   useEffect(() => {
     // Hide loader after 3 seconds
     const timer = setTimeout(() => {
@@ -37,12 +39,17 @@ function App() {
             className="min-h-screen bg-stone-50"
           >
             <Navbar />
+            
             <Hero />
             <About />
+            <WhyChooseUs />
             <Amenities />
             <Dishes />
+            <BookNow />
             <Gallery />
             <CustomerPhotos />
+            <BookNow />
+
             <Footer />
             <Scrolltotop />
           </motion.div>
