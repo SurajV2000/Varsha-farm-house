@@ -9,61 +9,50 @@ const Dishes = () => {
       description:
         "A refreshing mix of organic vegetables harvested from our garden, dressed with our signature herb vinaigrette.",
       image: "/food/food1.jpeg",
-      price: "$12",
     },
     {
       name: "Rustic Vegetable Soup",
       description:
         "Hearty soup made with seasonal vegetables and aromatic herbs.",
       image: "/food/food2.jpeg",
-      price: "$10",
     },
     {
       name: "Grilled Farm Chicken",
-      description:
-        "Tender chicken marinated in herbs and spices.",
+      description: "Tender chicken marinated in herbs and spices.",
       image: "/food/food3.jpeg",
-      price: "$18",
     },
     {
       name: "Homemade Pasta",
-      description:
-        "Handcrafted pasta tossed in a rich tomato sauce.",
+      description: "Handcrafted pasta tossed in a rich tomato sauce.",
       image: "/food/food4.jpeg",
-      price: "$16",
     },
     {
       name: "Berry Crumble",
-      description:
-        "Seasonal berries topped with crunchy oat crumble.",
+      description: "Seasonal berries topped with crunchy oat crumble.",
       image: "/food/food5.jpeg",
-      price: "$9",
     },
     {
       name: "Farm House Special Platter",
-      description:
-        "A selection of our finest dishes.",
+      description: "A selection of our finest dishes.",
       image: "/food/food6.jpeg",
-      price: "$25",
     },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [visibleDishes, setVisibleDishes] = useState(3);
 
-  // ✅ Responsive logic
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 640) {
-        setVisibleDishes(1); // mobile
+        setVisibleDishes(1);
       } else if (window.innerWidth < 1024) {
-        setVisibleDishes(2); // tablet
+        setVisibleDishes(2);
       } else {
-        setVisibleDishes(3); // desktop
+        setVisibleDishes(3);
       }
     };
 
-    handleResize(); // initial
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -86,46 +75,46 @@ const Dishes = () => {
   };
 
   return (
-    <section id="dishes" className="py-10 bg-white">
+    <section id="dishes" className="py-12 md:py-16 bg-white">
       <div className="container mx-auto px-4">
 
         {/* Heading */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+        <div className="text-center mb-10 md:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-2">
             Our <span className="text-amber-600">Signature Dishes</span>
           </h2>
-          <p className="text-gray-600 max-w-xl mx-auto">
+          <p className="text-gray-600 text-sm sm:text-base max-w-xl mx-auto">
             Indulge in farm-to-table delights crafted with fresh ingredients
           </p>
-          <div className="w-14 h-[2px] bg-amber-500 mx-auto mt-3 rounded-full" />
+          <div className="w-12 h-[2px] bg-amber-500 mx-auto mt-3 rounded-full" />
         </div>
 
         {/* Header Row */}
-        <div className="flex justify-between items-center mb-6 px-4">
-          <h3 className="text-xl md:text-2xl font-semibold text-amber-600">
+        <div className="flex justify-between items-center mb-6">
+          <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-amber-600">
             Featured Dishes
           </h3>
 
           <div className="flex gap-2">
             <button
               onClick={prevSlide}
-              className="w-10 h-10 flex items-center justify-center rounded-full border border-amber-500 text-amber-600 hover:bg-amber-500 hover:text-white transition"
+              className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border border-amber-500 text-amber-600 hover:bg-amber-500 hover:text-white transition"
             >
-              <ChevronLeft className="h-5 w-5" />
+              <ChevronLeft className="h-4 w-4 sm:h-5 sm:w-5" />
             </button>
 
             <button
               onClick={nextSlide}
-              className="w-10 h-10 flex items-center justify-center rounded-full border border-amber-500 text-amber-600 hover:bg-amber-500 hover:text-white transition"
+              className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-full border border-amber-500 text-amber-600 hover:bg-amber-500 hover:text-white transition"
             >
-              <ChevronRight className="h-5 w-5" />
+              <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5" />
             </button>
           </div>
         </div>
 
         {/* Cards */}
         <div
-          className={`grid gap-6 items-center ${
+          className={`grid gap-4 sm:gap-6 items-center ${
             visibleDishes === 1
               ? "grid-cols-1"
               : visibleDishes === 2
@@ -135,7 +124,8 @@ const Dishes = () => {
         >
           {getVisibleDishes().map((dish, index) => {
             const centerIndex = Math.floor(visibleDishes / 2);
-            const isCenter = index === centerIndex;
+            const isCenter =
+              visibleDishes > 1 && index === centerIndex; // ❗ disable for mobile
 
             return (
               <motion.div
@@ -144,7 +134,7 @@ const Dishes = () => {
                 animate={{
                   opacity: 1,
                   y: 0,
-                  scale: isCenter ? 1.05 : 0.95,
+                  scale: isCenter ? 1.05 : 1,
                 }}
                 transition={{ duration: 0.3 }}
                 className={`group relative rounded-2xl overflow-hidden ${
@@ -153,7 +143,7 @@ const Dishes = () => {
               >
 
                 {/* Image */}
-                <div className="relative h-[260px] overflow-hidden">
+                <div className="relative h-[220px] sm:h-[240px] md:h-[260px] overflow-hidden">
                   <img
                     src={dish.image}
                     alt={dish.name}
@@ -163,14 +153,12 @@ const Dishes = () => {
                 </div>
 
                 {/* Content */}
-                <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                  <div className="flex justify-between items-center">
-                    <h4 className="text-lg font-semibold">
-                      {dish.name}
-                    </h4>
-                  </div>
+                <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 text-white">
+                  <h4 className="text-base sm:text-lg font-semibold leading-snug">
+                    {dish.name}
+                  </h4>
 
-                  <p className="text-sm text-gray-200 mt-2">
+                  <p className="text-xs sm:text-sm text-gray-200 mt-1 sm:mt-2 leading-relaxed">
                     {dish.description}
                   </p>
                 </div>
