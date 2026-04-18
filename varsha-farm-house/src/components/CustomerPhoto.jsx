@@ -3,20 +3,57 @@ import { useState } from "react";
 const CustomerPhotos = () => {
   const [isPaused, setIsPaused] = useState(false);
 
-  const customerPhotos = [
-    { src: "/customer/customer1.jpeg", alt: "Family enjoying picnic at Varsha Farm House" },
-    { src: "/customer/customer2.jpeg", alt: "Family enjoying picnic at Varsha Farm House" },
-    { src: "/customer/customer3.jpeg", alt: "Family enjoying picnic at Varsha Farm House" },
-    { src: "https://lh3.googleusercontent.com/p/AF1QipNgil1n918P4Dhi6gKhLp9Zym2cYRjTDH6-xtI=s1360-w1360-h1020", alt: "Friends having good time at the farm house" },
-    { src: "https://lh3.googleusercontent.com/p/AF1QipMPy15w6ZF0i3NTPFwzSta6v1-x0H46-PUMAmo=s1360-w1360-h1020", alt: "Fun at pool side" },
-    { src: "https://lh3.googleusercontent.com/p/AF1QipNtmrUZEMQtvkwqAEGiK0hyfPlQ2hQX7QsqS1g=s1360-w1360-h1020", alt: "Family time" },
-    { src: "https://lh5.googleusercontent.com/p/AF1QipOM2NcHH23bs8hKfl12Ypn3njNSPR6qiHrFhGw=w141-h141-n-k-no-nu", alt: "Guests exploring nature trails" },
-    { src: "https://lh3.googleusercontent.com/p/AF1QipNvGzbgKs0Kf7V59fY33Gg9OzMB6iDrz1zvtLM=s1360-w1360-h1020", alt: "" },
-    { src: "https://lh3.googleusercontent.com/p/AF1QipPxF13a4bFCclGKVyChDqREBnbFvWeucuFZu-A=s1360-w1360-h1020", alt: "Guests enjoying outdoor activities" },
-    { src: "https://lh3.googleusercontent.com/p/AF1QipNG6TsUTAD03t1OBUDm59n6CcwcJ2tN2mkfBa8=s1360-w1360-h1020", alt: "Family gathering at Varsha Farm House" },
-    { src: "https://lh3.googleusercontent.com/p/AF1QipOISmbh9yDH6mIeHOUhTq9dqaijkE4SsfApg0Q=s1360-w1360-h1020", alt: "" },
-    { src: "https://lh3.googleusercontent.com/p/AF1QipPpCw62xiTpIlNIyCm9gReq87BgByGdEODH8N0=s1360-w1360-h1020", alt: "" },
+ const customerPhotos = [
+    {
+      src: "/customer/customer1.jpeg",
+      alt: "Family enjoying picnic at Varsha Farm House",
+    },
+    {
+      src: "/customer/customer2.jpeg",
+      alt: "Family enjoying picnic at Varsha Farm House",
+    },
+    {
+      src: "/customer/customer3.jpeg",
+      alt: "Family enjoying picnic at Varsha Farm House",
+    },
+    {
+      src: "https://lh3.googleusercontent.com/p/AF1QipNgil1n918P4Dhi6gKhLp9Zym2cYRjTDH6-xtI=s1360-w1360-h1020",
+      alt: "Friends having good time at the farm house",
+    },
+    {
+      src: "https://lh3.googleusercontent.com/p/AF1QipMPy15w6ZF0i3NTPFwzSta6v1-x0H46-PUMAmo=s1360-w1360-h1020",
+      alt: "Fun at pool side",
+    },
+    {
+      src: "https://lh3.googleusercontent.com/p/AF1QipNtmrUZEMQtvkwqAEGiK0hyfPlQ2hQX7QsqS1g=s1360-w1360-h1020",
+      alt: "Family time",
+    },
+    {
+      src: "https://lh5.googleusercontent.com/p/AF1QipOM2NcHH23bs8hKfl12Ypn3njNSPR6qiHrFhGw=w141-h141-n-k-no-nu",
+      alt: "Guests exploring nature trails",
+    },
+    {
+      src: "https://lh3.googleusercontent.com/p/AF1QipNvGzbgKs0Kf7V59fY33Gg9OzMB6iDrz1zvtLM=s1360-w1360-h1020",
+      alt: "",
+    },
+    {
+      src: "https://lh3.googleusercontent.com/p/AF1QipPxF13a4bFCclGKVyChDqREBnbFvWeucuFZu-A=s1360-w1360-h1020",
+      alt: "Guests enjoying outdoor activities",
+    },
+    {
+      src: "https://lh3.googleusercontent.com/p/AF1QipNG6TsUTAD03t1OBUDm59n6CcwcJ2tN2mkfBa8=s1360-w1360-h1020",
+      alt: "Family gathering at Varsha Farm House",
+    },
+    {
+      src: "https://lh3.googleusercontent.com/p/AF1QipOISmbh9yDH6mIeHOUhTq9dqaijkE4SsfApg0Q=s1360-w1360-h1020",
+      alt: "",
+    },
+    {
+      src: "https://lh3.googleusercontent.com/p/AF1QipPpCw62xiTpIlNIyCm9gReq87BgByGdEODH8N0=s1360-w1360-h1020",
+      alt: "",
+    },
   ];
+  
 
   return (
     <section id="customer-photos" className="py-10 bg-amber-50 overflow-hidden">
