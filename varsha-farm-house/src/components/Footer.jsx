@@ -9,100 +9,143 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-amber-900 text-amber-100">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="bg-stone-950 text-amber-50">
+
+      <div className="container mx-auto px-4 py-14">
+
+        {/* TOP SECTION */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+
+          {/* LEFT - BRAND */}
           <div>
-            {/* Logo added here */}
-            <img
-              src="/logo.jpg" // Update path if needed
-              alt="Varsha Farm House Logo"
-              className="h-16 w-auto mb-4"
-            />
-            <h3 className="text-xl font-bold mb-4">Varsha Farm House</h3>
-            <p className="mb-4">
-              Experience the charm of countryside living with modern amenities
-              and delicious farm-to-table cuisine.
+
+            <div className="flex items-center gap-4 mb-6">
+              <img
+                src="/logo.jpg"
+                className="h-14 w-14 rounded-full object-cover"
+                alt="logo"
+              />
+              <h2 className="text-2xl font-bold">
+                Varsha Farm House
+              </h2>
+            </div>
+
+            <p className="text-amber-100/70 leading-relaxed text-sm max-w-lg">
+              Escape into nature with peaceful stays, fresh air, organic food,
+              and unforgettable family moments surrounded by greenery.
             </p>
-            <div className="flex space-x-4">
+
+            {/* SOCIAL - FIXED (proper links + hover effects) */}
+            <div className="flex gap-4 mt-6">
+
               <a
                 href="https://www.facebook.com/profile.php?id=61550689064644"
-                className="hover:text-white transition-colors"
+                target="_blank"
+                className="p-2 rounded-full border border-white/10 hover:bg-blue-600 hover:text-white transition"
               >
-                <Facebook size={20} />
-                <span className="sr-only">Facebook</span>
+                <Facebook size={18} />
               </a>
+
               <a
                 href="https://www.instagram.com/varsha_farm_house"
-                className="hover:text-white transition-colors"
+                target="_blank"
+                className="p-2 rounded-full border border-white/10 hover:bg-pink-500 hover:text-white transition"
               >
-                <Instagram size={20} />
-                <span className="sr-only">Instagram</span>
+                <Instagram size={18} />
               </a>
-              <a href="#" className="hover:text-white transition-colors">
-                <Twitter size={20} />
-                <span className="sr-only">Twitter</span>
-              </a>
+
             </div>
+
           </div>
 
-          <div>
-            <h3 className="text-xl font-bold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              {["Home", "About", "Amenities", "Dishes", "Gallery"].map(
-                (item) => (
-                  <li key={item}>
-                    <a
-                      href={`#${item.toLowerCase()}`}
-                      className="hover:text-white transition-colors"
-                    >
-                      {item}
-                    </a>
-                  </li>
-                )
-              )}
-            </ul>
-          </div>
+          {/* RIGHT - CONTACT */}
+          <div className="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur">
 
-          <div>
-            <h3 className="text-xl font-bold mb-4">Contact Us</h3>
-            <ul className="space-y-3">
-              <li className="flex items-start">
-                <MapPin className="mr-2 h-5 w-5 flex-shrink-0 mt-0.5" />
-                <div className="flex flex-col w-full">
-                  <span>Karul, Guhagar, Maharashtra</span>
-                  <div className="mt-2 w-full max-w-md">
-                    <iframe
-                      className="w-32 h-24 sm:w-56 sm:h-28 xs:w-24 xs:h-24 rounded-lg"
-                      style={{ border: 0 }}
-                      loading="lazy"
-                      allowFullScreen
-                      referrerPolicy="no-referrer-when-downgrade"
-                      src="https://www.google.com/maps?q=Varsha+Farm+House,+Karul,+Guhagar,+Maharashtra+415719&output=embed"
-                    ></iframe>
-                  </div>
+            <h3 className="text-lg font-semibold mb-6 text-amber-200">
+              Contact Us
+            </h3>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+
+              {/* PHONE */}
+              <div className="space-y-4">
+
+                <div className="flex items-center gap-3">
+                  <Phone className="text-amber-400 w-4 h-4" />
+                  <span>+91 989-255-0316</span>
                 </div>
-              </li>
-              <li className="flex items-center">
-                <Phone className="mr-2 h-5 w-5" />
-                <span className="whitespace-pre-line">
-                  +91 989-255-0316 {"\n"} +91 882-894-8608
-                </span>
-              </li>
-              <li className="flex items-center">
-                <Mail className="mr-2 h-5 w-5" />
-                <span>varshafarms23@gmail.com</span>
-              </li>
-            </ul>
+
+                <div className="flex items-center gap-3">
+                  <Phone className="text-amber-400 w-4 h-4" />
+                  <span>+91 882-894-8608</span>
+                </div>
+
+              </div>
+
+              {/* EMAIL + LOCATION */}
+              <div className="space-y-4">
+
+                <div className="flex items-center gap-3">
+                  <Mail className="text-amber-400 w-4 h-4" />
+                  <span className="break-all">varshafarms23@gmail.com</span>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <MapPin className="text-amber-400 w-4 h-4 mt-1" />
+                  <span>Karul, Guhagar, Maharashtra</span>
+                </div>
+
+              </div>
+
+            </div>
+
+            {/* CTA */}
+            <div className="mt-6 flex gap-3">
+
+              <a
+                href="tel:+919892550316"
+                className="flex-1 text-center py-2 rounded-full bg-amber-600 hover:bg-amber-700 text-white text-sm font-medium transition"
+              >
+                Call Now
+              </a>
+
+              <a
+                href="https://wa.me/919892550316"
+                target="_blank"
+                className="flex-1 text-center py-2 rounded-full border border-amber-500 text-amber-200 hover:bg-amber-500 hover:text-black text-sm font-medium transition"
+              >
+                WhatsApp
+              </a>
+
+            </div>
+
           </div>
+
         </div>
 
-        <div className="border-t border-amber-800 mt-8 pt-8 text-center">
-          <p>
-            &copy; {new Date().getFullYear()} Varsha Farm House. All rights
-            reserved.
-          </p>
+        {/* MAP */}
+        <div className="mt-12 rounded-2xl overflow-hidden border border-white/10">
+          <iframe
+            className="w-full h-44 md:h-52"
+            loading="lazy"
+            src="https://www.google.com/maps?q=Varsha+Farm+House,+Karul,+Guhagar,+Maharashtra+415719&output=embed"
+          />
         </div>
+
+        {/* BOTTOM BAR */}
+        <div className="mt-10 pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between text-xs text-amber-200/60 gap-3">
+
+          <p>© {new Date().getFullYear()} Varsha Farm House</p>
+
+          <div className="flex gap-5">
+            <a href="#home" className="hover:text-white transition">Home</a>
+            <a href="#about" className="hover:text-white transition">About</a>
+            <a href="#gallery" className="hover:text-white transition">Gallery</a>
+            <a href="#contact" className="hover:text-white transition">Contact</a>
+          </div>
+
+        </div>
+
       </div>
     </footer>
   );
