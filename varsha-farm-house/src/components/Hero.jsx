@@ -3,8 +3,10 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section id="home" className="relative h-[90vh] flex items-center overflow-hidden">
-
+    <section
+      id="home"
+      className="relative h-[90vh] flex items-center overflow-hidden"
+    >
       {/* Background */}
       <div
         className="absolute inset-0 bg-cover bg-center z-0 scale-105"
@@ -19,17 +21,13 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-tr from-black/70 via-black/30 to-transparent z-[1]" />
 
       {/* Blur */}
-      <div className="absolute inset-0 z-[2] pointer-events-none">
-
-      </div>
+      <div className="absolute inset-0 z-[2] pointer-events-none"></div>
 
       {/* Content */}
       <div className="container mx-auto px-4 z-10 text-white">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-
           {/* LEFT */}
           <div className="max-w-3xl">
-
             {/* Badge */}
             <div className="inline-block mb-4 px-3 py-1 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm text-xs sm:text-sm">
               🌿 Nature • Luxury • Peace
@@ -56,8 +54,8 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-base sm:text-lg md:text-2xl mb-6 md:mb-8 text-gray-200"
             >
-              Experience the charm of countryside living with modern amenities and
-              delicious farm-to-table cuisine
+              Experience the charm of countryside living with modern amenities
+              and delicious farm-to-table cuisine
             </motion.p>
 
             {/* Buttons */}
@@ -102,15 +100,17 @@ const Hero = () => {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-4 md:gap-6 bg-white/10 backdrop-blur-md p-4 md:p-6 rounded-2xl border border-white/20 shadow-xl w-full sm:w-auto">
               <div>
-                <p className="text-lg md:text-2xl font-bold">10K+</p>
-                <p className="text-xs md:text-sm text-gray-300">Happy Visitors</p>
+                <p className="text-lg md:text-2xl font-bold">100+</p>
+                <p className="text-xs md:text-sm text-gray-300">
+                  Happy Visitors
+                </p>
               </div>
               <div>
-                <p className="text-lg md:text-2xl font-bold">25+</p>
+                <p className="text-lg md:text-2xl font-bold">10+</p>
                 <p className="text-xs md:text-sm text-gray-300">Amenities</p>
               </div>
               <div>
-                <p className="text-lg md:text-2xl font-bold">4.8★</p>
+                <p className="text-lg md:text-2xl font-bold">5★</p>
                 <p className="text-xs md:text-sm text-gray-300">Ratings</p>
               </div>
             </div>
@@ -125,7 +125,6 @@ const Hero = () => {
               </span>
             </div>
           </motion.div>
-
         </div>
       </div>
 
